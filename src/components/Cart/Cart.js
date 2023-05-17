@@ -1,5 +1,6 @@
 import React from "react";
 
+import Modal from "components/UI/Modal";
 import calsses from "./Cart.module.css";
 
 function Cart(props) {
@@ -11,7 +12,7 @@ function Cart(props) {
     </ul>
   );
   return (
-    <div>
+    <Modal>
       {cartItems}
       <div className={calsses.total}>
         <span>Total Amount</span>
@@ -21,7 +22,7 @@ function Cart(props) {
         <button className={calsses["button--alt"]}>Close</button>
         <button className={calsses.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 }
 
